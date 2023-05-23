@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 앱바 레이아웃에 넣은 이유 :  splash할때 화면을 꽉채우기 위해서 (디자인적 이유) -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/woo_3"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</LinearLayout>
