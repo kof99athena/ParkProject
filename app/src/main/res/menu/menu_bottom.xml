@@ -4,17 +4,14 @@
 
     <item android:id="@+id/home"
           app:showAsAction="always"
-          android:icon="@drawable/baseline_my_location_24"
+          android:icon="@drawable/home"
           android:title="HOME"/>
 
     <item android:id="@+id/search"
-          android:icon="@drawable/baseline_search_24"
+          android:icon="@drawable/park"
           app:showAsAction="always"
-          android:title="검색"/>
+          android:title="SEARCH"/>
 
-    <item android:id="@+id/favorite"
-          android:icon="@drawable/baseline_favorite_24"
-          app:showAsAction="always"
-          android:title="스크랩"/>
+
 
 </menu>

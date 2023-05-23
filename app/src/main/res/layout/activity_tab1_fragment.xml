@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- activity_main.xml -->
+<android.support.constraint.motion.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
-    tools:context=".Tab1Fragment">
+    app:layoutDescription="@xml/scene_01"
+    tools:showPaths="true">
 
-   <RelativeLayout
-       android:id="@+id/container_mapview"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+   <View
+       android:id="@+id/button"
+       android:layout_width="64dp"
+       android:layout_height="64dp"
+       android:background="@color/colorAccent"
+       android:text="Button" />
 
-
-</RelativeLayout>
+</android.support.constraint.motion.MotionLayout>

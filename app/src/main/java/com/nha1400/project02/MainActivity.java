@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     Tab1Fragment tab1Fragment;
     Tab2Fragment tab2Fragment;
-    Tab3Fragment tab3Fragment;
     NavigationBarView navigationBarView;
 
 
@@ -50,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
 
         tab1Fragment=new Tab1Fragment();
         tab2Fragment=new Tab2Fragment();
-        tab3Fragment=new Tab3Fragment();
+
 
 
         //시작할때 처음 화면에 보여줄 뷰를 지정한다. FragmentManager
         //내가 궁금한거 : 왜 import도 안되있는데 FragmentManager get으로 가져올수있냐? import도 안되있는데
         //모든 FragmentActivity 및 subclass(AppcompatActivity)는 getSupportFragmentManager()를 통해
         //FragmentManager를 소환할수있다.
-        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,tab2Fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,tab1Fragment).commit();
 
 
         navigationBarView=findViewById(R.id.bottomview);
@@ -73,9 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,tab2Fragment).commit();
                         return true;
 
-                    case R.id.favorite:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,tab3Fragment).commit();
-                        return true;
+
                 }
 
                 return false;
