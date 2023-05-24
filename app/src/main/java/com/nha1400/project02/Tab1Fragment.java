@@ -21,7 +21,6 @@ public class Tab1Fragment extends Fragment {
 
 
 
-
     @Nullable
     @Override
     //Fragment를 상속받으면 반드시 구현해야하는 메소드 : onCreateView

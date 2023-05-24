@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
     NavigationBarView navigationBarView;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
