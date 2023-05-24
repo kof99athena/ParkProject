@@ -15,7 +15,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="데이터를 읽어옵니다."/>
+        android:text="load data.. "/>
 
 
     <androidx.recyclerview.widget.RecyclerView

@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- activity_main.xml -->
-<android.support.constraint.motion.MotionLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/motionLayout"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/scene_01"
+    android:orientation="vertical"
     tools:showPaths="true">
 
-   <View
-       android:id="@+id/button"
-       android:layout_width="64dp"
-       android:layout_height="64dp"
-       android:background="@color/colorAccent"
-       android:text="Button" />
+    <TextView
+        android:text="반려동물 놀이시설 구비 공원 현황"
+        android:textSize="25sp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-</android.support.constraint.motion.MotionLayout>
+    <ImageView
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/dog"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <TextView
+        android:text=" 반려동물 전용놀이터가 구비된 공원의 위치정보를 포함한"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="데이터 및 실제 공원 사진을 제공합니다."
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
