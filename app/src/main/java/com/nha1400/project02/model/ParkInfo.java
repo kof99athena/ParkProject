@@ -1,4 +1,4 @@
-package com.nha1400.project02;
+package com.nha1400.project02.model;
 
 public class ParkInfo {
     String name;

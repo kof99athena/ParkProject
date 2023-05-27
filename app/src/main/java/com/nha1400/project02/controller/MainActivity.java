@@ -1,31 +1,17 @@
-package com.nha1400.project02;
+package com.nha1400.project02.controller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationBarView;
 import com.kakao.util.maps.helper.Utility;
-
-import net.daum.mf.map.api.MapView;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
+import com.nha1400.project02.R;
+import com.nha1400.project02.Tab2Fragment;
+import com.nha1400.project02.view.Tab1Fragment;
 
 public class MainActivity extends AppCompatActivity {
 
