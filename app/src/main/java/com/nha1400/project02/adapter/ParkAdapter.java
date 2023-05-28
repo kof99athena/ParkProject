@@ -1,4 +1,4 @@
-package com.nha1400.project02;
+package com.nha1400.project02.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.nha1400.project02.R;
 import com.nha1400.project02.model.ParkInfo;
 
 import java.util.ArrayList;

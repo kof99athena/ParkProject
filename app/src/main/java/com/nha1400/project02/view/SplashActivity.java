@@ -8,10 +8,10 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.nha1400.project02.controller.MainActivity;
 import com.nha1400.project02.R;
+import com.nha1400.project02.presenter.ParkContract;
 
-public class Splash_Main extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity implements ParkContract.splash {
 
 
 
@@ -21,11 +21,20 @@ public class Splash_Main extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS); //splash 할때 statusBar까지 포함해서 노출한다.
+        splashStart();
 
-        new Handler().postDelayed(()->{ //왜 핸들러를쓸까? 시간을 제한할때 많이쓰는 방법. UI작업도 할수있다.
-            Intent intent=new Intent(Splash_Main.this, MainActivity.class);
-            startActivity(intent);
-
-        },2000); //(  런어블객체(인텐트) ,  2초   );
     }
+
+    @Override
+    public void splashStart() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        }, 2000);
+    }
+
 }

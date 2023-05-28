@@ -1,4 +1,4 @@
-package com.nha1400.project02.controller;
+package com.nha1400.project02.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +10,9 @@ import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationBarView;
 import com.kakao.util.maps.helper.Utility;
 import com.nha1400.project02.R;
-import com.nha1400.project02.Tab2Fragment;
-import com.nha1400.project02.view.Tab1Fragment;
+import com.nha1400.project02.presenter.ParkContract;
 
-public class MainActivity extends AppCompatActivity {
-
-    //키 해시값 얻어오기
+public class MainActivity extends AppCompatActivity implements ParkContract.main{
 
     Tab1Fragment tab1Fragment;
     Tab2Fragment tab2Fragment;
@@ -27,23 +24,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        tab1Fragment=new Tab1Fragment();
+        tab2Fragment=new Tab2Fragment();
+        navigationBarView=findViewById(R.id.bottomview);
+
         String keyhash= Utility.getKeyHash(this);
         Log.i("keyHash",keyhash);
 
-
-        tab1Fragment=new Tab1Fragment();
-        tab2Fragment=new Tab2Fragment();
-
-
-
-        //시작할때 처음 화면에 보여줄 뷰를 지정한다. FragmentManager
-        //내가 궁금한거 : 왜 import도 안되있는데 FragmentManager get으로 가져올수있냐? import도 안되있는데
-        //모든 FragmentActivity 및 subclass(AppcompatActivity)는 getSupportFragmentManager()를 통해
-        //FragmentManager를 소환할수있다.
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,tab1Fragment).commit();
+        mainStart();
 
+    }//onCreate method
 
-        navigationBarView=findViewById(R.id.bottomview);
+    @Override
+    public void mainStart() {
+
         navigationBarView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override //MenuItem item은 누구냐? item은 @menu에 만든 버텀뷰의 하나
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -55,16 +50,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.search:
                         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,tab2Fragment).commit();
                         return true;
-
-
                 }
 
                 return false;
             }
         });
 
-
-
-    }//onCreate method
+    }
 
 }//MainActivity class

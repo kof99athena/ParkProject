@@ -1,4 +1,4 @@
-package com.nha1400.project02;
+package com.nha1400.project02.view;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +12,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.nha1400.project02.adapter.ParkAdapter;
+import com.nha1400.project02.R;
 import com.nha1400.project02.model.ParkInfo;
+import com.nha1400.project02.presenter.ParkContract;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -25,7 +28,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Tab2Fragment extends Fragment {
+public class Tab2Fragment extends Fragment{
     RecyclerView recyclerView;
     ParkAdapter parkAdapter;
 

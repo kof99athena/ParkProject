@@ -1,9 +1,9 @@
 package com.nha1400.project02.model;
 
 public class ParkInfo {
-    String name;
-    String addr;
-    int image;
+    public String name;
+    public String addr;
+    public int image;
 
     public ParkInfo() {
     }

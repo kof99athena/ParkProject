@@ -20,10 +20,11 @@
             android:name=".view.Tab1Fragment"
             android:exported="false" />
         <activity
-            android:name=".controller.MainActivity"
+            android:name=".view.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Splash_Main"
+            android:name=".view.SplashActivity"
+            android:theme="@style/SplashTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
